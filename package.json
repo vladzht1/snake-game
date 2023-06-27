@@ -1,0 +1,20 @@
+{
+  "name": "snake-game",
+  "license": "MIT License",
+  "author": "vladzht1",
+  "version": "1.0.0",
+  "description": "A simple snake game made with HTML5 canvas",
+  "keywords": ["javascript", "html5", "webpack"],
+  "private": true,
+  "scripts": {
+    "dev": "npx webpack serve",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.87.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

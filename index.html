@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <style>
+    html, body {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    .disabled {
+      display: none !important;
+    }
+
+    .ui {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .ui__play-screen, .ui__game-over {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ui__play-screen__button, .ui__game-over__button {
+      border: none;
+      background-color: rgb(232, 232, 232);
+      padding: 0.5rem 1.5rem;
+      border-radius: 1rem;
+      font-size: 2rem;
+      font-weight: 300;
+      transition-duration: 0.2s;
+    }
+
+    .ui__play-screen__button:hover, .ui__game-over__button:hover {
+      background-color: rgb(212, 212, 212);
+    }
+  </style>
+</head>
+<body>
+  <div class="ui">
+    <div class="ui__score disabled">
+      Score:&nbsp;
+      <span class="ui__score-field"></span>
+    </div>
+    <div class="ui__play-screen">
+      <h1>Snake game!</h1>
+      <div class="ui__play-screen__button-container">
+        <button class="ui__play-screen__button">
+          Start
+        </button>
+      </div>
+    </div>
+    <div class="ui__game-over disabled">
+      <h1>GAME OVER!</h1>
+      <small>
+        Your score:&nbsp;
+        <span class="ui__game-over__score"></span>
+      </small>
+      <div class="ui__game-over__button-container">
+        <button class="ui__game-over__button">
+          Restart
+        </button>
+      </div>
+    </div>
+  </div>
+  <canvas class="canvas"></canvas>
+</body>
+</html>
